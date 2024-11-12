@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import team from "../../database/about/team";
+import team from "../../../database/about/team";
 
 const MiniTeam: React.FC = () => {
     return (

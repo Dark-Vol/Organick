@@ -1,4 +1,4 @@
-import offerCatalog from "../../database/about/offerCatalog";
+import offerCatalog from "../../../database/about/offerCatalog";
 
 const MiniOffer: React.FC = () => {
     return (

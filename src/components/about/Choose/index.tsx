@@ -1,4 +1,4 @@
-import policyInfo from "../../database/about/policyInfo";
+import policyInfo from "../../../database/about/policyInfo";
 
 const Choose: React.FC = () => {
     return (
