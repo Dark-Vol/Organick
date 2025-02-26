@@ -12,6 +12,7 @@ import { fetchInputProducts } from "../../../redux/slices/inputSlice";
 
 import debounce from "lodash.debounce";
 
+
 import "./Style.scss";
 
 import SearchModal from "../SearchModal";
