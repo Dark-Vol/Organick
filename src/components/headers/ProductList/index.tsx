@@ -33,10 +33,8 @@ const ProductList: React.FC<Product> = ({
 }) => {
   const dispatch = useDispatch();
 
-  // Initial state selected -> cartSlice.js
   const toggleShoppingCart = useSelector(selectToggleShoppingCart);
 
-  // Viewed product
   const { handleViewItem } = useViewedProducts();
 
   const createProduct = () => ({
@@ -66,10 +64,8 @@ const ProductList: React.FC<Product> = ({
     dispatch(setDecrease(product));
   };
 
-  // Product discount
   const percentage = useDiscount(price, salePrice);
 
-  // Remove the product -> Shopping cart (redux) / localStorage
   const { removeProduct } = useRemoveProduct();
 
   const toSingleProduct = () => {
@@ -111,18 +107,14 @@ const ProductList: React.FC<Product> = ({
             {name}
           </span>
         </Link>
-
         <p className="product-list__item-exposition-description">
           {description}
         </p>
-
         <div className="product-list__item-exposition-mark">
           {isNew && (
             <span className="product-list__item-exposition-mark-new">NEW</span>
           )}
-
           <span className="product-list__item-exposition-mark-tag">{tag}</span>
-
           {isSalePrice && (
             <span className="product-list__item-exposition-mark-percentage">
               -{percentage}%
@@ -135,9 +127,7 @@ const ProductList: React.FC<Product> = ({
         <button className="counter__decrease" onClick={() => handleDecrease()}>
           -
         </button>
-
         <span className="counter__value">{counter}</span>
-
         <button className="counter__increase" onClick={() => handleIncrease()}>
           +
         </button>
@@ -160,7 +150,6 @@ const ProductList: React.FC<Product> = ({
                 <span className="product-list__item-action-value-original">
                   ${price} USD
                 </span>
-
                 <span className="product-list__item-action-value-single-price">
                   ${modifiedPrice.toFixed(2)} USD
                 </span>
