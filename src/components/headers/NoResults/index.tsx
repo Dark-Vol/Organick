@@ -3,7 +3,6 @@ import { selectInputResults } from "../../../redux/slices/inputSlice";
 import "./Style.scss";
 
 const NoResults: React.FC = () => {
-  // Initial state selected -> inputSlice.js
   const { searchProduct } = useSelector(selectInputResults);
 
   return (
