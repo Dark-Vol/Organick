@@ -12,6 +12,7 @@ import {
   setVisibleSearch,
 } from "../../../redux/slices/inputSlice";
 
+
 import { useResetFilters } from "../../../hooks/useProductActions";
 
 import "./Style.scss";
