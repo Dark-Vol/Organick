@@ -19,7 +19,6 @@ import {
 export const useViewedProducts = () => {
   const dispatch = useDispatch();
 
-  // Initial state selected -> singleProductSlice.js
   const viewedProducts = useSelector(selectRelatedProducts);
 
   const handleViewItem = (product: Product) => {
@@ -33,7 +32,6 @@ export const useViewedProducts = () => {
     localStorage.setItem("viewedProducts", JSON.stringify(newRelatedProducts));
   };
 
-  // Export the function
   return { handleViewItem };
 };
 
@@ -54,13 +52,11 @@ export const useDiscount = (price: number, salePrice?: number) => {
 export const useRemoveProduct = () => {
   const dispatch = useDispatch();
 
-  // Initial state selected -> cartSlice.js
   const shoppingCart = useSelector(selectCart);
 
   const removeProduct = (parent_id: number) => {
     dispatch(setRemoveProduct(parent_id));
 
-    // Update localStorage
     const updatedItems = shoppingCart.filter(
       (item) => item.parent_id !== parent_id
     );
@@ -74,7 +70,6 @@ export const useRemoveProduct = () => {
 export const useAddProduct = () => {
   const dispatch = useDispatch();
 
-  // Initial state selected -> cartSlice.js
   const shoppingCart = useSelector(selectCart);
 
   const addProduct = (product: Product) => {
@@ -89,7 +84,6 @@ export const useAddProduct = () => {
 };
 
 export const useIsAdded = () => {
-  // Initial state selected -> cartSlice.js
   const shoppingCart = useSelector(selectCart);
 
   const isAdded = (parent_id: number) => {

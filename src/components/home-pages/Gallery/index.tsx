@@ -23,7 +23,6 @@ const gallery = [
 ];
 
 const Gallery: React.FC = () => {
-  // Reset filters -> Shop
   const { resetFilters } = useResetFilters();
 
   return (

@@ -14,11 +14,9 @@ import ProductItems from "../../ProductItems";
 import { useResetFilters } from "../../../hooks/useProductActions";
 
 const Offer: React.FC = () => {
-  // Initial state selected -> catalogueSlice.js
   const isSkeletonLoading = useSelector(selectIsSkeletonLoading);
   const catalogue = useSelector(selectCatalogue);
 
-  // Reset filters -> Shop
   const { resetFilters } = useResetFilters();
 
   return (
@@ -35,7 +33,6 @@ const Offer: React.FC = () => {
                 We Offer Organic Options for You
               </h2>
             </div>
-
             <button
               onClick={() => {
                 window.scrollTo(0, 0);

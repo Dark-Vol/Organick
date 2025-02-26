@@ -11,10 +11,8 @@ import { selectIsSkeletonLoading } from "../../redux/slices/singlePortfolioSlice
 import Skeleton from "../../components/Skeleton/PostSingle";
 
 const PortfolioSingle: React.FC = () => {
-  // Initial state selected -> PortfolioSlice.js
   const viewedPortfolio = useSelector(selectSinglePortfolio);
 
-  // Initial state selected -> singlePostSlice.js
   const isSkeletonLoading = useSelector(selectIsSkeletonLoading);
 
   return (
@@ -52,7 +50,6 @@ const PortfolioSingle: React.FC = () => {
                       <b>:</b>
                       {item.fullDataName} {item.dataNumber}, {item.year}
                     </li>
-
                     <li className="portfolio-single__header-lists-list">
                       <h3 className="portfolio-single__header-lists-list-text">
                         Client
@@ -60,7 +57,6 @@ const PortfolioSingle: React.FC = () => {
                       <b>:</b>
                       {item.client}
                     </li>
-
                     <li className="portfolio-single__header-lists-list">
                       <h3 className="portfolio-single__header-lists-list-text">
                         Category
@@ -68,7 +64,6 @@ const PortfolioSingle: React.FC = () => {
                       <b>:</b>
                       {item.category}
                     </li>
-
                     <li className="portfolio-single__header-lists-list">
                       <h3 className="portfolio-single__header-lists-list-text">
                         Service
@@ -78,48 +73,38 @@ const PortfolioSingle: React.FC = () => {
                     </li>
                   </ul>
                 </div>
-
                 <div className="container">
                   <div className="portfolio-single__content">
                     <h4 className="portfolio-single__content-title">
                       About The Farm:
                     </h4>
-
                     <p className="portfolio-single__content-descr">
                       {item.aboutTheFarm}
                     </p>
-
                     <img
                       className="portfolio-single__content-img"
                       src={item.imageUrlContent}
                       alt="OrganicProducts"
                       loading="lazy"
                     />
-
                     <span className="portfolio-single__content-mark">
                       The {item.title}
                     </span>
-
                     <h4 className="portfolio-single__content-title">
                       How To Farm:
                     </h4>
-
                     <p className="portfolio-single__content-descr">
                       {item.aboutTheFarm}
                     </p>
-
                     <p className="portfolio-single__content-descr">
                       {item.aboutTheFarmSub}
                     </p>
-
                     <h4 className="portfolio-single__content-title">
                       Conclusion:
                     </h4>
-
                     <p className="portfolio-single__content-descr">
                       {item.conclusion}
                     </p>
-
                     <p className="portfolio-single__content-descr">
                       {item.conclusionSub}
                     </p>

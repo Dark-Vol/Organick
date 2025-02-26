@@ -13,7 +13,6 @@ const Error: React.FC = () => {
             <p className="error__content-title-descr">
               The page you are looking for doesn't exist or has been moved
             </p>
-
             <button
               onClick={() => {
                 window.scrollTo(0, 0);

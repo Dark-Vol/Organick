@@ -30,7 +30,6 @@ export interface Product {
 const SearchModal: React.FC = () => {
   const dispatch = useDispatch();
 
-  // Initial state selected -> inputSlice.js
   const { searchProduct, showNoResults, inputProducts } =
     useSelector(selectInputResults);
   const isSkeletonLoading = useSelector(selectIsSkeletonLoading);

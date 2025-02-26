@@ -25,10 +25,8 @@ const ProductItems: React.FC<Product> = ({
 }) => {
   const dispatch = useDispatch();
 
-  // Viewed product
   const { handleViewItem } = useViewedProducts();
 
-  // Product discount
   const percentage = useDiscount(price, salePrice);
 
   const toSingleProduct = () => {
@@ -70,7 +68,6 @@ const ProductItems: React.FC<Product> = ({
             </span>
           </div>
 
-          {/* is salePrice === true */}
           {isSalePrice && (
             <span className="product-items__item-badge-info-header-percentage">
               -{percentage}%
@@ -102,7 +99,6 @@ const ProductItems: React.FC<Product> = ({
 
         <span className="product-items__item-badge-line"></span>
 
-        {/* is salePrice === true */}
         {isSalePrice ? (
           <>
             <span className="product-items__item-badge-original">
@@ -111,7 +107,6 @@ const ProductItems: React.FC<Product> = ({
             <span className="product-items__item-badge-sail">
               ${salePrice} USD
             </span>
-            {/* is salePrice === false */}
           </>
         ) : (
           <span className="product-items__item-badge-single-price">

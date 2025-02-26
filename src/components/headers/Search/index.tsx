@@ -76,19 +76,14 @@ const Search: React.FC<Product> = ({
     });
   };
 
-  // Product discount
   const percentage = useDiscount(price, salePrice);
 
-  // Add the product -> Shopping cart (redux) / localStorage
   const { addProduct } = useAddProduct();
 
-  // Viewed product
   const { handleViewItem } = useViewedProducts();
 
-  // Remove the product -> Shopping cart (redux) / localStorage
   const { removeProduct } = useRemoveProduct();
 
-  // Found the product -> -> Shopping cart (redux) / localStorage
   const { isAdded } = useIsAdded();
 
   return (
@@ -113,7 +108,6 @@ const Search: React.FC<Product> = ({
           </Link>
 
           <div className="search-items__item-product-cover-exposition-mark">
-            {/* is isNew === true */}
             {isNew && (
               <span className="search-items__item-product-cover-exposition-mark-new">
                 NEW
@@ -129,7 +123,6 @@ const Search: React.FC<Product> = ({
 
       <div className="search-items__item-product-action">
         <div className="search-items__item-product-action-value">
-          {/* is salePrice === true */}
           {isSalePrice ? (
             <>
               <span className="search-items__item-product-action-value-original">
@@ -144,7 +137,6 @@ const Search: React.FC<Product> = ({
                 ${salePrice} USD
               </span>
 
-              {/* is salePrice === false */}
             </>
           ) : (
             <span className="search-items__item-product-action-value-single-price">
@@ -155,10 +147,9 @@ const Search: React.FC<Product> = ({
 
         <button
           onClick={() => {
-            // isAdded === true
             isAdded(parent_id)
               ? removeProduct(parent_id)
-              : // isAdded === false
+              :
                 handleAddToCart();
           }}
           className="search-items__item-product-action-btn"

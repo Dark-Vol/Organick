@@ -11,7 +11,6 @@ import "./Style.scss";
 const Pagination: React.FC = () => {
   const dispatch = useDispatch();
 
-  // Initial state selected -> shopSlice.js
   const currentPage = useSelector(selectCurrentPage);
 
   return (

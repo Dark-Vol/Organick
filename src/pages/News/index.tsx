@@ -11,13 +11,10 @@ import Skeleton from "../../components/Skeleton/Posts";
 const NewsPage: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
 
-  // Initial state selected -> postsSlice.js
   const posts = useSelector(selectPosts);
 
-  // Initial state selected -> singlePostSlice.js
   const isSkeletonLoading = useSelector(selectIsSkeletonLoading);
 
-  // Fetch posts -> Home page
   useEffect(() => {
     const fetchPostsData = async () => {
       dispatch(fetchPosts());
@@ -31,7 +28,6 @@ const NewsPage: React.FC = () => {
       <div className="page-banner page-banner_news">
         <h1 className="page-banner__text">Recent News</h1>
       </div>
-
       <div className="container">
         <div className="news__content">
           <ul className="news__content-posts">

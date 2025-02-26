@@ -18,7 +18,6 @@ const AuthorPosts: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { surname } = useParams();
 
-  // Initial state selected -> authorsPostsSlice.js
   const isSkeletonLoading = useSelector(selectIsSkeletonLoading);
   const authorsPosts = useSelector(selectAuthorsPosts);
 
@@ -62,7 +61,6 @@ const AuthorPosts: React.FC = () => {
             </ul>
           </div>
         </div>
-
         <Newsletter />
       </div>
     </>

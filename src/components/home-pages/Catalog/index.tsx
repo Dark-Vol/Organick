@@ -15,11 +15,9 @@ import Skeleton from "../../Skeleton/Shop";
 import ProductItems from "../../ProductItems";
 
 const Catalog: React.FC = () => {
-  // Initial state selected -> catalogueSlice.js
   const isSkeletonLoading = useSelector(selectIsSkeletonLoading);
   const catalogue = useSelector(selectCatalogue);
 
-  // Reset filters -> Shop
   const { resetFilters } = useResetFilters();
 
   return (
@@ -31,7 +29,6 @@ const Catalog: React.FC = () => {
 
             <h2 className="product__content-title-heading">Our Products</h2>
           </div>
-
           <ul className="product-items product-items_list">
             {isSkeletonLoading
               ? [...new Array(8)].map((_, index) => <Skeleton key={index} />)
@@ -47,7 +44,6 @@ const Catalog: React.FC = () => {
                     </li>
                   ))}
           </ul>
-
           <button
             onClick={() => {
               resetFilters();

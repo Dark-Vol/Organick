@@ -20,7 +20,6 @@ const NewsSingle: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { postId } = useParams();
 
-  // Initial state selected -> singlePostSlice.js
   const singlePost = useSelector(selectSinglePost);
   const isSkeletonLoading = useSelector(selectIsSkeletonLoading);
 
@@ -76,28 +75,22 @@ const NewsSingle: React.FC = () => {
                       </span>
                     </Link>
                   </div>
-
                   <h1 className="news-single__header-title">{post.title}</h1>
-
                   <p className="news-single__header-descr">
                     {post.description}
                   </p>
                 </div>
-
                 <div className="container">
                   <div className="news-single__content">
                     <p className="news-single__content-descr news-single__content-descr_additionalText">
                       {post.additionalText}
                     </p>
-
                     <h2 className="news-single__content-title">
                       {post.introHeading}
                     </h2>
-
                     <p className="news-single__content-descr news-single__content-descr_introContent">
                       {post.introContent}
                     </p>
-
                     <ul style={{ paddingLeft: "20px", marginBottom: "50px" }}>
                       {post.introListItems.map((item, index) => (
                         <li
@@ -108,17 +101,13 @@ const NewsSingle: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-
                     <p className="news-single__content-quote">"{post.quote}"</p>
-
                     <h2 className="news-single__content-title">
                       {post.subheadingOne}
                     </h2>
-
                     <p className="news-single__content-descr news-single__content-descr_subheadingOneContent">
                       {post.subheadingOneContent}
                     </p>
-
                     <ul style={{ paddingLeft: "20px" }}>
                       {post.conclusionListItems.map((item, index) => (
                         <li

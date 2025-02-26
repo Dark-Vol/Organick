@@ -61,7 +61,6 @@ const Services: React.FC = () => {
                     variety of essential goods for your everyday needs.
                   </p>
                 </div>
-
                 <div className="services__content-layout-item-info">
                   <img
                     className="services__content-layout-item-info-img"
@@ -69,18 +68,15 @@ const Services: React.FC = () => {
                     src="img/Services/Delivery-min.jpg"
                     alt="Delivery"
                   />
-
                   <h3 className="services__content-layout-item-info-title">
                     Delivery Services
                   </h3>
-
                   <p className="services__content-layout-item-info-description">
                     Experience hassle-free delivery services bringing your
                     favorite products right to your doorstep
                   </p>
                 </div>
               </div>
-
               <div style={{ textAlign: "center" }}>
                 <img
                   width={600}
@@ -176,7 +172,6 @@ const Services: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Intro />
     </>
   );

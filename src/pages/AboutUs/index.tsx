@@ -20,11 +20,9 @@ const AboutUs: React.FC = () => {
                 <span className="about-us__content-info-title-subheading">
                   About Us
                 </span>
-
                 <h2 className="about-us__content-info-title-heading">
                   We Do Creative Things for Success
                 </h2>
-
                 <p className="about-us__content-info-title-description">
                   Welcome to our creative space! At 'About Us,' we strive for
                   excellence by embracing innovation and creativity. Our
@@ -33,7 +31,6 @@ const AboutUs: React.FC = () => {
                   the creative journey that defines us.
                 </p>
               </div>
-
               <div className="about-us__content-info-natural">
                 <img
                   src="../icons/About/Tractor-min.jpg"
@@ -41,12 +38,10 @@ const AboutUs: React.FC = () => {
                   alt="Vegan Food"
                   id="about-us-img"
                 />
-
                 <div className="about-us__content-info-natural-description">
                   <h4 className="about-us__content-info-natural-description-title">
                     Modern Agriculture Equipment
                   </h4>
-
                   <p className="about-us__content-info-natural-description-text">
                     Discover the cutting-edge technology and modern agriculture
                     equipment that powers our commitment to efficiency and
@@ -54,7 +49,6 @@ const AboutUs: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <div className="about-us__content-info-natural">
                 <img
                   src="../icons/About/Plant-min.jpg"
@@ -62,7 +56,6 @@ const AboutUs: React.FC = () => {
                   alt="Mailbox Quality"
                   id="about-us-img"
                 />
-
                 <div className="about-us__content-info-natural-description">
                   <h4 className="about-us__content-info-natural-description-title">
                     No Growth Hormones Are Used

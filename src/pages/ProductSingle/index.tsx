@@ -20,7 +20,6 @@ const ProductSingle: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { productId } = useParams();
 
-  // Initial state selected -> singleProductSlice.js
   const singleProduct = useSelector(selectSingleProduct);
   const isSkeletonLoading = useSelector(selectIsSkeletonLoading);
 
@@ -39,7 +38,6 @@ const ProductSingle: React.FC = () => {
       <div className="page-banner page-banner_product-single">
         <h1 className="page-banner__text">Shop Single</h1>
       </div>
-
       <section className="product-single">
         <div className="container">
           <ul className="product-single__content">
@@ -56,7 +54,6 @@ const ProductSingle: React.FC = () => {
           </ul>
         </div>
       </section>
-
       <Newsletter />
     </>
   );

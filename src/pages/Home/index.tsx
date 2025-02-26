@@ -19,7 +19,6 @@ import Newsletter from "../../components/footers/Newsletter";
 const Home: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
 
-  // Fetch products
   useEffect(() => {
     const fetchHomeData = async () => {
       dispatch(fetchProducts());
@@ -28,7 +27,6 @@ const Home: React.FC = () => {
     fetchHomeData();
   }, [dispatch]);
 
-  // Fetch posts
   useEffect(() => {
     const fetchPostsData = async () => {
       dispatch(fetchPosts());
@@ -40,23 +38,14 @@ const Home: React.FC = () => {
   return (
     <>
       <Banner />
-
       <SailsCart />
-
       <About />
-
       <Catalog />
-
       <Testimonial />
-
       <Offer />
-
       <Story />
-
       <Gallery />
-
       <News />
-
       <Newsletter />
     </>
   );

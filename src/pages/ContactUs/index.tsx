@@ -10,9 +10,7 @@ const PasswordProtected: React.FC = () => {
       </div>
 
       <Feedback />
-
       <Location />
-
       <Newsletter />
     </>
   );

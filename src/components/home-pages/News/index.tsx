@@ -8,7 +8,6 @@ import "./Style.scss";
 import PostItems from "../../PostItems";
 
 const News: React.FC = () => {
-  // Initial state selected -> singlePostSlice.js
   const posts = useSelector(selectPosts);
 
   return (

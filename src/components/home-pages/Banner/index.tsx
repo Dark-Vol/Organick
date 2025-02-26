@@ -11,12 +11,10 @@ const Banner: React.FC = () => {
             <span className="banner__content-title-subheading">
               100% Natural Food
             </span>
-
             <h2 className="banner__content-title-heading">
               Choose the best <br /> healthier way <br /> of life
             </h2>
           </div>
-
           <button
             onClick={() => {
               window.scrollTo(0, 0);

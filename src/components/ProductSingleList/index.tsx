@@ -30,10 +30,8 @@ const ProductSingleList: React.FC<Product> = ({
   counter,
   modifiedPrice,
 }) => {
-  // Initial state selected -> singleProductSlice.js
   const viewedProducts = useSelector(selectRelatedProducts);
 
-  // Product descr buttons
   const [additional, setAdditional] = useState("description");
 
   const handleAddToCart = () => {
@@ -58,16 +56,12 @@ const ProductSingleList: React.FC<Product> = ({
     addProduct(productToAdd);
   };
 
-  // Product discount
   const percentage = useDiscount(price, salePrice);
 
-  // Add the product -> Shopping cart (redux) / localStorage
   const { addProduct } = useAddProduct();
 
-  // Remove the product -> Shopping cart (redux) / localStorage
   const { removeProduct } = useRemoveProduct();
 
-  // Found the product -> -> Shopping cart (redux) / localStorage
   const { isAdded } = useIsAdded();
 
   return (
@@ -78,13 +72,10 @@ const ProductSingleList: React.FC<Product> = ({
           src={img}
           alt={name}
         />
-
         <div className="product-single__content-item-info-title">
           <h2 className="product-single__content-item-info-title-heading">
             {name}
           </h2>
-
-          {/* is salePrice === true */}
           {isSalePrice ? (
             <>
               <span className="product-single__content-item-info-title-original">
@@ -93,18 +84,15 @@ const ProductSingleList: React.FC<Product> = ({
               <span className="product-single__content-item-info-title-sail">
                 ${salePrice} USD
               </span>
-              {/* is salePrice === false */}
             </>
           ) : (
             <span className="product-single__content-item-info-title-single-price">
               ${price} USD
             </span>
           )}
-
           <p className="product-single__content-item-info-title-description">
             {descriptionMore}
           </p>
-
           <button
             onClick={() => {
               isAdded(parent_id) ? removeProduct(parent_id) : handleAddToCart();
@@ -173,7 +161,6 @@ const ProductSingleList: React.FC<Product> = ({
           >
             Additional Info
           </button>
-
           {additional === "description" ? (
             <p
               className={`additional__content-description ${
@@ -197,12 +184,10 @@ const ProductSingleList: React.FC<Product> = ({
           )}
         </div>
       </div>
-
       <>
         <h2 className="customers customers_single">Related Products</h2>
         <ul className="product-items product-items_basket">
           {viewedProducts
-            // Filter the product(s) -> 0 - 4
             .slice(0, 4)
             .map((product: Product) => (
               <li className="product-items__item" key={product.parent_id}>

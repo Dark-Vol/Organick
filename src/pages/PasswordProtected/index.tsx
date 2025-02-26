@@ -67,7 +67,6 @@ const PasswordProtected: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Newsletter />
     </>
   );

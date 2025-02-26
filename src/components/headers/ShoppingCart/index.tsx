@@ -19,17 +19,13 @@ const ShoppingCart: React.FC = () => {
   const dispatch = useDispatch();
   const cartRef = useRef<HTMLElement>(null);
 
-  // Initial state selected -> cartSlice.js
   const shoppingCart = useSelector(selectCart);
   const toggleShoppingCart = useSelector(selectToggleShoppingCart);
 
-  // The total amount
   useTotalPrice(shoppingCart);
 
-  // In shopping basket no products
   const isBasketEmpty = shoppingCart && shoppingCart.length === 0;
 
-  // Close -> shopping cart
   useEffect(() => {
     if (isBasketEmpty) {
       dispatch(setToggleShoppingCart(false));
@@ -54,7 +50,6 @@ const ShoppingCart: React.FC = () => {
     >
       <div className="shopping-basket__header">
         <h4 className="shopping-basket__header-title">Your Cart</h4>
-
         <span
           onClick={() => {
             dispatch(setToggleShoppingCart(!toggleShoppingCart));

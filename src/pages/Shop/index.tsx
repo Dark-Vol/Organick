@@ -22,7 +22,6 @@ import Pagination from "../../components/Pagination";
 import { Product } from "../../components/headers/SearchModal";
 import { AppDispatch } from "../../redux/store";
 
-// Menu categories
 const menuCategories = [
   "all",
   "vegetable",
@@ -32,7 +31,6 @@ const menuCategories = [
   "health",
 ];
 
-// Menu sort
 const menuSort = [
   { value: "relevance", label: "Relevance" },
   { value: "price", label: "Price, Low To High" },
@@ -52,7 +50,6 @@ const Shop: React.FC = () => {
   const shopProducts = useSelector(selectShopProducts);
   const isSkeletonLoading = useSelector(selectIsSkeletonLoading);
 
-  // Fetch products
   useEffect(() => {
     const fetchShopData = async () => {
       let queryParams = "";
@@ -89,7 +86,6 @@ const Shop: React.FC = () => {
   }, [categories, currentPage, activeIndex]);
 
   useEffect(() => {
-    // Create the obj of str JSone links -> categories, currentPage, activeIndex
     const queryStr = qs.stringify({
       categories,
       page: currentPage,
@@ -97,17 +93,11 @@ const Shop: React.FC = () => {
     });
 
     if (queryStr !== "categories=all&page=1&sort=relevance") {
-      // Update URL -> queryStr
       navigate(`?${queryStr}`);
 
-      // Save filters -> localStorage
       localStorage.setItem("shopFilters", queryStr);
     } else {
-      // Update URL -> queryStr
       navigate(`?${""}`);
-
-      // Save filters -> localStorage
-      // Default data
       const defaultCategories = "all";
       const defaultPage = 1;
       const defaultSort = "relevance";
@@ -118,7 +108,6 @@ const Shop: React.FC = () => {
     }
   }, [categories, currentPage, activeIndex, navigate]);
 
-  // Outside clicked popup
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (sortRef.current && !sortRef.current.contains(event.target as Node)) {
@@ -138,7 +127,6 @@ const Shop: React.FC = () => {
     dispatch(setActiveIndex(value));
   };
 
-  // Getting the quantity products
   const productQuantity = (catalogue: Product[]): number => {
     return catalogue.length;
   };

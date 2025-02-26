@@ -23,7 +23,6 @@ const Portfolio: React.FC = () => {
           ))}
         </ul>
       </div>
-
       <Newsletter />
     </>
   );

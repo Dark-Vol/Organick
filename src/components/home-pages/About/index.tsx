@@ -12,11 +12,9 @@ const About: React.FC = () => {
               <span className="about__content-info-title-subheading">
                 About Us
               </span>
-
               <h2 className="about__content-info-title-heading">
                 We Believe in Working with Accredited Farmer
               </h2>
-
               <p className="about__content-info-title-description">
                 Welcome to the world of natural and organic. Here you can
                 discover the bounty of nature. We have grown on the principles
@@ -24,7 +22,6 @@ const About: React.FC = () => {
                 chemical-free meal for perfect nutrition.
               </p>
             </div>
-
             <div className="about__content-info-quality">
               <img
                 id="about-img"
@@ -32,7 +29,6 @@ const About: React.FC = () => {
                 loading="lazy"
                 alt="Vegan Food"
               />
-
               <div className="about__content-info-quality-description">
                 <h4 className="about__content-info-quality-description-title">
                   Organic Foods Only
