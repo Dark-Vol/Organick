@@ -1,0 +1,182 @@
+@import "../../../Variables.scss";
+
+.search-items {
+  display: none;
+  position: relative;
+  z-index: 2;
+  padding: 0px 20px;
+  background-color: #fff;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  width: 100%;
+
+  &_active {
+    display: block;
+  }
+
+  &__item {
+    padding: 15px 0px;
+    border-bottom: 1px solid $white-gray;
+
+    &-product {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 90px;
+
+      &-cover {
+        display: flex;
+        align-items: center;
+
+        &-img {
+          width: 60px;
+          height: 60px;
+        }
+
+        &-exposition {
+          text-align: left;
+          margin-left: 10px;
+
+          &-name {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-size: 24px;
+            color: $dark-blue;
+            line-height: 1.6;
+            transition: 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+              color: $light-green;
+            }
+          }
+
+          &-mark {
+            margin-top: 5px;
+
+            &-tag,
+            &-new,
+            &-percentage {
+              padding: 5px 20px;
+              border-radius: 8px;
+              font-family: "Open Sans", sans-serif;
+              font-weight: 600;
+              color: white;
+              font-size: 15px;
+              line-height: 1.8;
+              background-color: $dark-blue;
+              margin-right: 10px;
+
+              &:last-child {
+                margin-right: 0px;
+              }
+            }
+
+            &-new {
+              background-color: $light-green;
+            }
+
+            &-percentage {
+              background-color: red;
+            }
+          }
+        }
+      }
+
+      &-action {
+        display: flex;
+        align-items: center;
+
+        &-value {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-right: 15px;
+
+          &-percentage {
+            padding: 5px 20px;
+            border-radius: 8px;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 600;
+            color: white;
+            font-size: 15px;
+            background-color: red;
+            line-height: 1.2;
+          }
+
+          &-original {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            color: $dark-gray-sail-price;
+            text-decoration: line-through red;
+            line-height: 1.8;
+          }
+
+          &-sail,
+          &-single-price {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: $dark-blue;
+            line-height: 1.8;
+          }
+        }
+
+        &-btn {
+          font-family: "Roboto", sans-serif;
+          font-weight: 700;
+          font-size: 20px;
+          width: 50px;
+          height: 45px;
+          border-radius: 8px;
+          transition: background-color 0.3s ease;
+          cursor: pointer;
+          color: $dark-blue;
+          background-color: $white;
+          border: 1px solid $dark-blue;
+
+          &:hover {
+            color: $white;
+            background-color: $dark-blue;
+          }
+        }
+      }
+    }
+  }
+
+  &__item:last-child {
+    border-bottom: none;
+  }
+}
+
+.search-iner {
+  display: flex;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+  padding: 15px 20px;
+  line-height: 1.6;
+  background-color: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom: 1px solid $white-gray;
+
+  &__text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    margin-left: 5px;
+  }
+
+  &__value {
+    margin-left: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: $dark-gray-sail-price;
+    line-height: 1.8;
+  }
+}

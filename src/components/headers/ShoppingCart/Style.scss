@@ -1,0 +1,106 @@
+@import "../../../Variables.scss";
+
+.shopping-basket {
+  width: 1400px;
+  position: fixed;
+  height: 666px;
+  overflow-y: auto;
+  top: -25%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+  border-radius: 8px;
+
+  &_visible {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: #000;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #e0e0e0;
+  }
+
+  &__header {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: $white;
+    z-index: 1;
+
+    &-title {
+      color: $dark-blue;
+      font-family: Roboto, sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    &-close {
+      color: $dark-gray;
+      font-family: Open Sans, sans-serif;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.6;
+      opacity: 0.5;
+      cursor: pointer;
+      transition: 0.5s ease;
+
+      &:hover {
+        opacity: 1;
+        color: #000;
+      }
+    }
+  }
+}
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.checkout {
+  padding: 0px 20px;
+
+  &__total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 330px;
+
+    &-label,
+    &-value {
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.6;
+    }
+
+    &-label {
+      color: $dark-blue;
+    }
+
+    &-value {
+      color: $light-green;
+    }
+  }
+}
