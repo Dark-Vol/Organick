@@ -7,16 +7,12 @@ import ShoppingCart from "../ShoppingCart";
 import Input from "../Input";
 
 const Navigation: React.FC = () => {
-  // Initial state selected -> cartSlice.js
   const toggleShoppingCart = useSelector(selectToggleShoppingCart);
-
-  // Initial state selected -> inputSlice.js
   const visibleInput = useSelector(selectVisibleInput);
 
   return (
     <>
       <Header />
-
       <div
         className={
           toggleShoppingCart || visibleInput
@@ -24,9 +20,7 @@ const Navigation: React.FC = () => {
             : "overlay"
         }
       ></div>
-
       <ShoppingCart />
-
       <Input />
     </>
   );
